@@ -1,0 +1,100 @@
+:root {
+    --footer-icons: #ffffff;
+    --text-shadow-color: #737a7a
+}
+
+body,html {
+    height: 100% !important;
+    color: white !important;
+}
+h3 {
+    letter-spacing: 1px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.blur {
+    filter: blur(2px);
+    -webkit-filter: blur(2px)
+}
+
+/* header */
+.background-image {
+    background: url('../assets/images/laptop.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 969px
+}
+
+.absolute-center-container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.welcome-text {
+    font-weight: 900;
+    font-size: 53pt;
+    letter-spacing: 3px;
+    text-shadow: -18px 8px 18px var(--text-shadow-color);
+}
+
+.welcome-text-subtitle {
+    font-weight: 900;
+    font-size: 33pt;
+    letter-spacing: 3px;
+    text-shadow: -18px 8px 18px var(--text-shadow-color);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg)
+  }
+
+  .arrow-container {
+    top:95%
+  }
+  
+  /* about-me */
+  strong {
+    display: inline-block;
+  }
+
+  /* contact */
+  .contact-background-image {
+    background: url('../assets/images/contact.jpg') no-repeat center;
+    background-size: cover;
+    height: 1000px;
+  }
+
+  .contact-me-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input,textarea {
+    border:0;
+    border-bottom: 1px solid lightslategrey;
+  }
+
+
+  /* footer */
+  #foot > .bg-dark {
+    height: 125px;
+  }
+
+.bi::before {
+    color: var(--footer-icons)
+}
+
