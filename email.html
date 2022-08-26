@@ -1,1 +1,62 @@
-<p>Az email küldése sikeres!</p>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikeres email küldés</title>
+
+    <style>
+        body {
+            background: url('assets/images/email-page/emailbg.webp') no-repeat;
+            background-size: cover;
+        }
+
+        div {
+            position: absolute;
+            top: 37%;
+            left: 37%;
+            text-align: center;
+        }
+
+        h1,p {
+            color: #251c04d4;
+        }
+
+        .arrow {
+            border: solid #795548;
+            border-width: 0 4px 4px 0;
+            display: inline-block;
+            padding: 5px;
+            margin-left: 25px;
+            margin-top: 10px;
+
+            animation: MoveHorizontal 2s ease-in-out 3s infinite;
+        }
+
+        @keyframes MoveHorizontal {
+            0% {margin-left: 25px;}
+            50% {margin-left: 5px;}
+            100% {margin-left: 25px;}
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+    </style>
+</head>
+<body>
+    <p><i class="arrow left" style="cursor: pointer;" onclick="BackToTheMainSite()"></i></p>
+    <div>
+        <h1>Köszönöm szépen a megkeresést!</h1>
+        <p>A lehető legrövidebb időn belül megpróbálok válaszolni!</p>
+    </div>
+</body>
+
+<script>
+    function BackToTheMainSite() {
+        window.location.href='https://csabakallai.github.io/portfolio/';
+    }
+</script>
+</html>
