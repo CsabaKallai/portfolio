@@ -8,7 +8,6 @@
 
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -21,7 +20,9 @@
             <br>
             <span class="welcome-text-subtitle">Junior full stack fejlesztő.</span>
         </div>
-        <div class="absolute-center-container arrow-container"><a href="#about-me"><i class="arrow down"></i></a></div>
+        <div class="absolute-center-container arrow-container position-absolute">
+            <a href="#about-me"><i class="arrow down"></i></a>
+        </div>
     </header>
 
     <!-- about me -->
@@ -44,8 +45,6 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                       
-                        <!-- If we need scrollbar -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
                       </div>
                 </div>
                 <div class="col-lg-6 d-grid gap-4">
@@ -72,18 +71,95 @@
 
         </div>
     </section>
+    
+    <!-- projektjeim -->
+    <section class="my-3 container">
+        <h3 class="text-center text-dark">Projektjeim</h3>
+        <span class="text-center text-secondary d-block projects-subtitle mb-5" >Alszöveg a projektekfül alá mert az jól nézki</span>
+
+        <div class="row mb-3 justify-content-center">
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-html-5.svg"></img>
+            </div>
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-javascript.svg"></img>
+            </div>
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-css3.svg"></img>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
+            </div>
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-sql-64.png"></img>
+            </div>
+            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
+                <img class="icon" src="assets/icons/icons8-git.svg"></img>
+            </div>
+        </div>
+
+        <div class="projects-container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
+                    <div class="project-details">
+                        <h6 class="text-dark">Projekt cím</h6>
+                        <span>Projekt szöveg</span>
+                        <span>tech stack</span>
+                        <div class="projekt-links">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
+                    <div class="project-details">
+                        <h6 class="text-dark">Projekt cím</h6>
+                        <span>Projekt szöveg</span>
+                        <span>tech stack</span>
+                        <div class="projekt-links">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
+                    <div class="project-details">
+                        <h6 class="text-dark">Projekt cím</h6>
+                        <span>Projekt szöveg</span>
+                        <span>tech stack</span>
+                        <div class="projekt-links">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+
+                </div>
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                </div>
+                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                </div>
+            </div> -->
+        </div>
+    </section>
 
     <!-- contact -->
-    <section class="my-3 position-relative">
+    <section class="position-relative">
         <div class="contact-background-image blur"></div>
         <form action="https://formsubmit.co/kallaicsaba.munka@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="localhost:5500">
+            <input type="hidden" name="_next" value="https://csabakallai.github.io/portfolio/email.html">
+            <input type="hidden" name="_captcha" value="false">
             <div class="contact-me-container rounded d-grid w-50 mx-auto gap-4 bg-light position-absolute">
                 <h3 class="text-center text-secondary mt-3">Lépjen kapcsolatba velem</h3>
-                <input class="mx-5 p-2 bg-transparent" type="text" id="name" placeholder="Név">
-                <input class="mx-5 p-2 bg-transparent" type="email" id="email" placeholder="Email">
-                <input class="mx-5 p-2 bg-transparent" type="text" id="subject" placeholder="Tárgy">
-                <textarea class="mx-5 p-2 bg-transparent" id="message" placeholder="Üzenet" rows="3"></textarea>
+                <input class="mx-5 p-2 bg-transparent" type="text" name="name" placeholder="Név">
+                <input class="mx-5 p-2 bg-transparent" type="email" name="email" placeholder="Email">
+                <input class="mx-5 p-2 bg-transparent" type="text" name="subject" placeholder="Tárgy">
+                <textarea class="mx-5 p-2 bg-transparent" name="message" placeholder="Üzenet" rows="3"></textarea>
                 <button class="btn w-25 mx-auto mb-3 rounded text-white" style="background-color: var(--swiper-navigation-color,var(--swiper-theme-color))" type="submit">Küldés</button>            
             </div>
        </form>
@@ -91,17 +167,18 @@
     </section>
 
     <footer>
-        <div class="container-fluid bg-dark">
+        <div class="container-fluid" style="background-color: #e2e3e5;">
             <div class=" w-75 mx-auto py-3">
                 <div class="row mb-3">
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-facebook"></i></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div>
+                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg"></img></a></div>
+                    <div class="col text-center"><a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg"></img></a></div>
+                    <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div> -->
                 </div>
                 <div class="row">
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-youtube"></i></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-github"></i></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-envelope"></i></a></div>
+                    <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-youtube"></i></a></div> -->
+                    <div class="col text-center"><a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg"></img></a></div>
+                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg"></img></a></div>
+                    <!-- <div class="col text-center"><a href="mailto:kallaicsaba.munka@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></div> -->
                 </div>
             </div>
         </div>

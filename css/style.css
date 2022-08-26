@@ -1,6 +1,7 @@
 :root {
     --footer-icons: #ffffff;
-    --text-shadow-color: #737a7a
+    --text-shadow-color: #737a7a;
+    --secondary-shadow: #a17a69;
 }
 
 body,html {
@@ -22,7 +23,7 @@ h3 {
 
 /* header */
 .background-image {
-    background: url('../assets/images/laptop.jpg') no-repeat center;
+    background: url('../assets/images/laptop.webp') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 969px
@@ -68,6 +69,24 @@ h3 {
   /* about-me */
   strong {
     display: inline-block;
+  }
+
+
+  /* projects */
+
+  .projects-subtitle {
+    font-size: 11pt
+  }
+
+  .box-shadow {
+    box-shadow : 0 3px 10px var(--secondary-shadow) !important;
+  }
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    margin: 0px auto;
   }
 
   /* contact */
