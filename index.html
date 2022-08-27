@@ -13,10 +13,10 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
 
     <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 </head>
 <body>
-    <header>
+    <header class="position-relative">
         <div class="background-image blur"></div>
         <div class="absolute-center-container text-center position-absolute">
             <span class="welcome-text">Szia, Csaba vagyok</span>
@@ -166,35 +166,36 @@
     </section>
 
     <!-- contact -->
-    <section class="position-relative">
-        <div class="contact-background-image blur"></div>
-        <form action="https://formsubmit.co/kallaicsaba.munka@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://csabakallai.github.io/portfolio/email.html">
-            <input type="hidden" name="_captcha" value="false">
-            <div class="contact-me-container rounded d-grid w-50 mx-auto gap-4 bg-light position-absolute">
-                <h3 class="text-center text-secondary mt-3">Lépjen kapcsolatba velem</h3>
-                <input class="mx-5 p-2 bg-transparent" type="text" name="name" placeholder="Név">
-                <input class="mx-5 p-2 bg-transparent" type="email" name="email" placeholder="Email">
-                <input class="mx-5 p-2 bg-transparent" type="text" name="subject" placeholder="Tárgy">
-                <textarea class="mx-5 p-2 bg-transparent" name="message" placeholder="Üzenet" rows="3"></textarea>
-                <button class="btn w-25 mx-auto mb-3 rounded text-white" style="background-color: var(--swiper-navigation-color,var(--swiper-theme-color))" type="submit">Küldés</button>            
+    <section class="container-fluid" style="background-color: #a0c6f4;">
+        <div class="row align-items-center justify-content-center">
+            <div class="contact-background-image col-xl-6 col-lg-8 col-md-12 col-sm-12"></div>
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-11">
+                <form action="https://formsubmit.co/kallaicsaba.munka@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://csabakallai.github.io/portfolio/email.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="contact-me-container rounded d-grid gap-4">
+                        <h2 class="text-center text-white mt-3">Lépjen kapcsolatba velem</h2>
+                        <input class="mx-1 p-2 bg-transparent" type="text" name="name" placeholder="Név">
+                        <input class="mx-1 p-2 bg-transparent" type="email" name="email" placeholder="Email">
+                        <input class="mx-1 p-2 bg-transparent" type="text" name="subject" placeholder="Tárgy">
+                        <textarea class="mx-1 p-2 bg-transparent" name="message" placeholder="Üzenet" rows="3"></textarea>
+                        <button class="btn" type="submit">Küldés</button>            
+                    </div>
+               </form>
             </div>
-       </form>
-        
+        </div>
     </section>
 
     <footer>
-        <div class="container-fluid" style="background-color: #e2e3e5;">
-            <div class=" w-75 mx-auto py-3">
-                <div class="row mb-3">
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg" loading="lazy"></img></a></div>
-                    <div class="col text-center"><a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg" loading="lazy"></img></a></div>
-                    <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div> -->
-                </div>
-                <div class="row">
+        <div class="container-fluid" style="background-color: #6f7e859e;">
+            <div class="row py-4">
+                <div class="col text-center">
+                    <a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg" loading="lazy"></img></a>
+                    <a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg" loading="lazy"></img></a>
+                    <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div> -->            
                     <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-youtube"></i></a></div> -->
-                    <div class="col text-center"><a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg" loading="lazy"></img></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg" loading="lazy"></img></a></div>
+                    <a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg" loading="lazy"></img></a>
+                    <a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg" loading="lazy"></img></a>
                     <!-- <div class="col text-center"><a href="mailto:kallaicsaba.munka@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></div> -->
                 </div>
             </div>
@@ -202,7 +203,7 @@
     </footer>
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 <script src="js/script.js"></script>
 
 </body>

@@ -10,7 +10,7 @@
 
 body,html {
     height: 100% !important;
-    color: white !important
+    color: white !important;
 }
 h3 {
     letter-spacing: 1px
@@ -22,13 +22,19 @@ h3 {
 }
 
 button {
-  animation: blinking 2s 2s ease-in-out infinite
+  animation: blinking 3s 2s ease-in-out infinite;
+  color: #79339e !important;
+  font-size: 20pt !important;
+}
+
+button:hover{
+  border: 0
 }
 
 @keyframes blinking {
   0% {opacity: 1}
-  50% {opacity: .5}
-  100% {opacity: 1 }
+  50% {opacity: .35}
+  100% {opacity: 1}
 }
 
 /* header */
@@ -193,20 +199,18 @@ button {
 
   /* contact */
   .contact-background-image {
-    background: url('../assets/images/contact.jpg') no-repeat center;
-    background-size: cover;
-    height: 1000px
-  }
-
-  .contact-me-container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+    background: url('../assets/images/contact/contact-img.svg') no-repeat left;
+    height: 785px;
+    width: 589px
   }
 
   input,textarea {
     border:0;
     border-bottom: 1px solid lightslategrey
+  }
+
+  .contact-me-container {
+    width: auto;
   }
 
 
