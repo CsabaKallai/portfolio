@@ -10,7 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,52 +23,39 @@
             <br>
             <span class="welcome-text-subtitle">Junior full stack fejlesztő.</span>
         </div>
-        <div class="absolute-center-container arrow-container position-absolute">
-            <a href="#about-me"><i class="arrow down"></i></a>
-        </div>
+        <a href="#about-me">
+            <div class="scroll-down"></div>
+        </a>
     </header>
 
     <!-- about me -->
     <section class="my-3" id="about-me">
         <div class="container-fluid">
             <div class="row align-items-center" style="height: 500px;">
-                <div class="col-lg-6">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper mb-5">
-                          <!-- Slides -->
-                          <div class="swiper-slide text-center"><img src="assets/images/1628488647351.jpg"/></div>
-                          <div class="swiper-slide text-center"><img src="assets/images/1628488647351.jpg" /></div>
-                          <div class="swiper-slide text-center"><img src="assets/images/1628488647351.jpg" /></div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                      
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                      
-                      </div>
+                <div class="col-lg-6 text-center">
+                    <div class="image-wrapper">
+                        <img class="frame" src="assets/images/1628488647351.jpg" loading="lazy"/>
+                    </div>                    
                 </div>
-                <div class="col-lg-6 d-grid gap-4">
+                <div class="col-lg-6 d-grid gap-4" data-aos="zoom-in-down">
                     <h3 class="text-dark">Rólam</h3>
                     <div>
-                        <strong class="text-dark w-25">Név</strong>
+                        <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-user-50.png" loading="lazy">Név</strong>
                         <span class="text-dark">Kállai Csaba</span>
                     </div>
                     <div>
-                        <strong class="text-dark w-25">Hely</strong>
+                        <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-location-50.png" loading="lazy">Hely</strong>
                         <span class="text-dark">Nyúl, Deák Ferenc utca 5</span>
                     </div>
                     <div>
-                        <strong class="text-dark w-25">Email</strong>
+                        <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-mail-50.png" loading="lazy">Email</strong>
                         <span class="text-dark">kallaicsaba.munka@gmail.com</span>
                     </div>
                     <div>
-                        <strong class="text-dark w-25">Tel</strong>
+                        <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-phone-50.png" loading="lazy">Tel</strong>
                         <span class="text-dark">+36/30 268 4325</span>
                     </div>
-                    <a href="assets/Önéletrajz.docx" download class="btn mx-auto  d-block mb-3 rounded text-white mt-2" style="background-color: var(--swiper-navigation-color,var(--swiper-theme-color))">Önéletrajz letöltése</a>
+                    <a href="assets/Önéletrajz.docx" download class="btn mx-auto  d-block mb-3 text-white mt-2" style="background-color: #3498db !important;" >Önéletrajz letöltése</a>
                 </div>
             </div>
 
@@ -73,79 +63,106 @@
     </section>
     
     <!-- projektjeim -->
-    <section class="my-3 container">
-        <h3 class="text-center text-dark">Projektjeim</h3>
-        <span class="text-center text-secondary d-block projects-subtitle mb-5" >Alszöveg a projektekfül alá mert az jól nézki</span>
-
-        <div class="row mb-3 justify-content-center">
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-html-5.svg"></img>
+    <section class="my-3 container-fluid">
+        <h3 class="text-center text-dark mb-5">Projektjeim</h3>
+        <span class="text-center text-secondary d-block projects-subtitle mb-3" style="font-size: 14pt;" >Tech stack</span>
+        <div class="row">
+            <div class="col" data-aos="fade-up">
+                <div class="row mb-3 justify-content-center" >
+                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Frontend</span>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2" >
+                        <img class="icon" src="assets/icons/icons8-html-5.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-javascript.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-css3.svg"></img>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="width: 7rem; height: 100px" src="assets/icons/asp.netmvc.jpg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="width: 6rem;" src="assets/icons/jquery-horizontal.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-bootstrap.svg"></img>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-javascript.svg"></img>
+            <div class="col" data-aos="fade-up">
+                <div class="row justify-content-center mb-3">
+                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Backend</span>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-sql-64.png"></img>
+                    </div>
+                </div>
+        
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="width: 7rem;" src="assets/icons/asp.netapi2.jpg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-mysql-logo.svg"></img>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-css3.svg"></img>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
-            </div>
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-sql-64.png"></img>
-            </div>
-            <div class="col-lg-2 rounded box-shadow mx-1 p-2">
-                <img class="icon" src="assets/icons/icons8-git.svg"></img>
+            <div class="col" data-aos="fade-up">
+                <div class="row justify-content-center mb-3">
+                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Egyéb</span>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-git.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" src="assets/icons/icons8-visual-studio.svg"></img>
+                    </div>
+                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="width: 7rem;" src="assets/icons/nunit2.png"></img>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="projects-container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
-                    <div class="project-details">
-                        <h6 class="text-dark">Projekt cím</h6>
-                        <span>Projekt szöveg</span>
-                        <span>tech stack</span>
-                        <div class="projekt-links">
-
-                        </div>
+            <div class="row justify-content-center gap-2">
+                <div class="col-lg-3 card p-0" style="width: 18rem;">
+                    <img class="card-img-top image"  src="assets/images/projects/panda.JPG" alt="Panda borítókép" loading="lazy">
+                    <div class="middle">
+                        <a href="https://panda.ecity.hu" target="_blank" id="panda-btn" class="btn d-block mx-auto">Érdekel</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title text-dark text-center">Panda</h5>
+                      <p class="card-text text-muted">Komplex költségvetés tervező program.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
-                    <div class="project-details">
-                        <h6 class="text-dark">Projekt cím</h6>
-                        <span>Projekt szöveg</span>
-                        <span>tech stack</span>
-                        <div class="projekt-links">
-
-                        </div>
+                <div class="col-lg-3 card p-0" style="width: 18rem;">
+                    <img class="card-img-top image"  src="assets/images/projects/eprod.JPG" alt="eProdukció borítókép" loading="lazy">
+                    <div class="middle">
+                        <a href="https://www.eprodukcio.hu/" target="_blank" id="eprod-btn" class="btn d-block mx-auto">Érdekel</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title text-dark text-center">eProdukció</h5>
+                      <p class="card-text text-muted">Színházi nyilvántartó és tervező szoftver.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                    <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg"></img>
-                    <div class="project-details">
-                        <h6 class="text-dark">Projekt cím</h6>
-                        <span>Projekt szöveg</span>
-                        <span>tech stack</span>
-                        <div class="projekt-links">
-
-                        </div>
+                <div class="col-lg-3 card p-0" style="width: 18rem;">
+                    <img class="card-img-top image" style="max-height: 162px;"  src="assets/images/projects/repeta.JPG" alt="Repeta borítókép" loading="lazy">
+                    <div class="middle">
+                        <a href="https://repeta.ecity.hu/" target="_blank" id="repeta-btn" class="btn d-block mx-auto">Érdekel</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title text-dark text-center">Repeta</h5>
+                      <p class="card-text text-muted">Közétkeztetési szoftvercsomag számos egyéb funkcióval.</p>
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-
-                </div>
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                </div>
-                <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                </div>
-            </div> -->
         </div>
+
     </section>
 
     <!-- contact -->
@@ -170,21 +187,23 @@
         <div class="container-fluid" style="background-color: #e2e3e5;">
             <div class=" w-75 mx-auto py-3">
                 <div class="row mb-3">
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg"></img></a></div>
-                    <div class="col text-center"><a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg"></img></a></div>
+                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg" loading="lazy"></img></a></div>
+                    <div class="col text-center"><a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg" loading="lazy"></img></a></div>
                     <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div> -->
                 </div>
                 <div class="row">
                     <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-youtube"></i></a></div> -->
-                    <div class="col text-center"><a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg"></img></a></div>
-                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg"></img></a></div>
+                    <div class="col text-center"><a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg" loading="lazy"></img></a></div>
+                    <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg" loading="lazy"></img></a></div>
                     <!-- <div class="col text-center"><a href="mailto:kallaicsaba.munka@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></div> -->
                 </div>
             </div>
         </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>
