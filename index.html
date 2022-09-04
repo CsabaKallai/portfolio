@@ -22,7 +22,7 @@
         <div class="absolute-center-container text-center position-absolute">
             <span class="welcome-text">Szia, Csaba vagyok</span>
             <br>
-            <span class="welcome-text-subtitle">Junior full stack fejlesztő.</span>
+            <span class="welcome-text-subtitle">Junior full stack fejlesztő</span>
         </div>
         <a href="#about-me">
             <div class="scroll-down"></div>
@@ -166,7 +166,6 @@
 
     </section>
 
-    <!-- PÖRGŐ IKON AZ EMAIL KÜLDÉSHEZ!!!!!!!!!!!!!!!!!!!!! -->
     <!-- contact -->
     <section class="container-fluid" style="background-color: #a0c6f4;">
         <div class="row align-items-center justify-content-center">
@@ -177,11 +176,24 @@
                     <input type="hidden" name="_captcha" value="false">
                     <div class="contact-me-container rounded d-grid gap-4">
                         <h2 class="text-center text-white mt-3">Lépjen kapcsolatba velem</h2>
-                        <input class="mx-1 p-2 bg-transparent" type="text" name="name" placeholder="Név">
-                        <input class="mx-1 p-2 bg-transparent" type="email" name="email" placeholder="Email">
-                        <input class="mx-1 p-2 bg-transparent" type="text" name="subject" placeholder="Tárgy">
-                        <textarea class="mx-1 p-2 bg-transparent" name="message" placeholder="Üzenet" rows="3"></textarea>
-                        <button id="send-btn" class="btn" type="submit" onclick="SendEmail()">Küldés</button>
+                        <div class="position-relative">
+                            <input class="mx-1 p-2 bg-transparent w-100" data-target="name" type="text" name="name" >
+                            <label class="position-absolute contact-title" id="label-name">Név</label>
+                        </div>
+                        <div class="position-relative">
+                            <input class="mx-1 p-2 bg-transparent w-100" type="email" data-target="email" name="email"required>
+                            <label class="position-absolute contact-title" id="label-email">Email</label>
+                        </div>
+                        <div class="position-relative">   
+                            <input class="mx-1 p-2 bg-transparent w-100" type="text" data-target="subject" name="subject">
+                            <label class="position-absolute contact-title" id="label-subject">Tárgy</label>
+                        </div>
+                        <div class="position-relative">
+                            <textarea class="mx-1 p-2 bg-transparent w-100" name="message" data-target="message" rows="3" required></textarea>
+                            <label class="position-absolute contact-title contact-textarea-title" id="textarea-message">Üzenet</label>
+                        </div>
+
+                        <button id="send-btn" class="btn mx-auto" type="submit" onclick="SendEmail()">Küldés</button>
                         <div class="spinner mx-auto" style="display: none;">
                             <div></div>
                             <div></div>
@@ -193,15 +205,15 @@
     </section>
 
     <footer>
-        <div class="container-fluid" style="background-color: #6f7e859e;">
+        <div class="container-fluid">
             <div class="row py-4">
                 <div class="col text-center">
                     <a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-linkedin.svg" loading="lazy"></img></a>
+                    <a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg" loading="lazy"></img></a>
                     <a href="https://www.facebook.com/csuhajjja" target="_blank"><img src="assets/icons/icons8-facebook.svg" loading="lazy"></img></a>
+                    <a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg" loading="lazy"></img></a>
                     <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-microsoft-teams"></i></a></div> -->            
                     <!-- <div class="col text-center"><a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><i class="bi bi-youtube"></i></a></div> -->
-                    <a href="https://github.com/CsabaKallai" target="_blank"><img src="assets/icons/icons8-github.svg" loading="lazy"></img></a>
-                    <a href="https://www.linkedin.com/in/csaba-k%C3%A1llai-646047219/" target="_blank"><img src="assets/icons/icons8-microsoft-teams.svg" loading="lazy"></img></a>
                     <!-- <div class="col text-center"><a href="mailto:kallaicsaba.munka@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></div> -->
                 </div>
             </div>

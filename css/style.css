@@ -1,7 +1,7 @@
 :root {
     --footer-icons: #ffffff;
     --text-shadow-color: #737a7a;
-    --secondary-shadow: #a17a69;
+    --secondary-shadow: #a17a69
 }
 * {
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 
 body,html {
     height: 100% !important;
-    color: white !important;
+    color: white !important
 }
 h3 {
     letter-spacing: 1px
@@ -22,9 +22,12 @@ h3 {
 }
 
 button {
-  animation: blinking 3s 2s ease-in-out infinite;
+  animation: blinking 2s 2s ease-in-out infinite;
   color: #79339e !important;
   font-size: 20pt !important;
+  width: 150px;
+  border-radius: 20px !important;
+  border: 2px solid #79339e  !important
 }
 
 button:hover{
@@ -32,9 +35,9 @@ button:hover{
 }
 
 @keyframes blinking {
-  0% {opacity: 1}
-  50% {opacity: .35}
-  100% {opacity: 1}
+  0% {transform: scale(1)}
+  50% {transform: scale(1.1)}
+  100% {transform: scale(1)}
 }
 
 /* header */
@@ -55,7 +58,8 @@ button:hover{
     font-weight: 900;
     font-size: 53pt;
     letter-spacing: 3px;
-    text-shadow: -18px 8px 18px var(--text-shadow-color)
+    text-shadow: -18px 8px 18px var(--text-shadow-color);
+    position: relative
 }
 
 .welcome-text-subtitle {
@@ -170,7 +174,7 @@ button:hover{
   }
   
   .card:hover .image,.card:hover .card-body {
-    opacity: 0.2;
+    opacity: 0.2
   }
   
   .card:hover .middle {
@@ -209,15 +213,63 @@ button:hover{
     border-bottom: 1px solid lightslategrey
   }
 
+  .label-up {
+    animation: up 1s 1;
+    animation-fill-mode: forwards
+  }
+
+  .label-down {
+    animation: down 1s 1;
+    animation-fill-mode: forwards
+  }
+
+  @keyframes up {
+    100% {top: -33.5%; background-color: #a0c6f4}
+  }
+
+  @keyframes down {
+    0% {top: -33.5%}
+    100% {top: 30%}
+  }
+
+  .textarea-up {
+    animation: textareaup 1s 1;
+    animation-fill-mode: forwards
+  }
+
+  .textarea-down {
+    animation: textareadown 1s 1;
+    animation-fill-mode: forwards
+  }
+
+
+  @keyframes textareaup {
+    100% {top: -15%;background-color: #a0c6f4}
+  }
+
+  @keyframes textareadown {
+    0% {top: -15%}
+    100% {top: 65%}
+  }
+
   .contact-me-container {
-    width: auto;
+    width: auto
+  }
+
+  .contact-title {
+    left: 15px;
+    top: 30%
+  }
+
+  .contact-textarea-title {
+    top: 65%
   }
 
   /* spinner */
 .spinner {
-  width: 100px;
-  height: 100px;
-  position: relative;
+  width: 70px;
+  height: 70px;
+  position: relative
 }
 .spinner div {
   box-sizing: border-box;
@@ -227,32 +279,46 @@ button:hover{
   border: 8px solid transparent;
   border-top-color: #ad60f5;
   border-radius: 50%;
-  animation: spinnerOne 1.2s linear infinite;
+  animation: spinnerOne 1.2s linear infinite
 }
 .spinner div:nth-child(2) {
   border: 8px solid transparent;
   border-bottom-color: #ad60f5;
-  animation: spinnerTwo 1.2s linear infinite;
+  animation: spinnerTwo 1.2s linear infinite
 }
 
 @keyframes spinnerOne {
-  0% { transform: rotate(0deg); border-width: 10px; }
-  50% { transform: rotate(180deg); border-width: 1px; }
-  100% { transform: rotate(360deg); border-width: 10px; }
+  0% { transform: rotate(0deg); border-width: 10px }
+  50% { transform: rotate(180deg); border-width: 1px }
+  100% { transform: rotate(360deg); border-width: 10px }
 }
 @keyframes spinnerTwo {
-  0% { transform: rotate(0deg); border-width: 1px; }
-  50% { transform: rotate(180deg); border-width: 10px; }
-  100% { transform: rotate(360deg); border-width: 1px; }
+  0% { transform: rotate(0deg); border-width: 1px }
+  50% { transform: rotate(180deg); border-width: 10px }
+  100% { transform: rotate(360deg); border-width: 1px }
 }
 
 
   /* footer */
+
+  footer .container-fluid {
+    background-color: #a0c6f4
+  }
+
   #foot > .bg-dark {
     height: 125px
   }
 
 .bi::before {
     color: var(--footer-icons)
+}
+
+
+footer img:hover {
+  transform: scale(1.3)
+}
+
+footer a {
+  margin: 0px 10px
 }
 
