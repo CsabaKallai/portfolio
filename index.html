@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1,maximum-scale=5">
     <title>Portfólió</title>
 
-    <!-- https://keithclark.co.uk/articles/loading-css-without-blocking-render/     nem blokkoló css beállítás -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
     <header class="position-relative">
         <div class="background-image blur"></div>
-        <div class="navbar-container">
-            <ul class="d-flex gap-5">
-                <li onclick="ScrollToElement('about-me')">Rólam</li>
-                <li onclick="ScrollToElement('projects')">Projektek</li>
-                <li onclick="ScrollToElement('contact-me')">Kapcsolat</li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-container">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav gap-5">
+                        <li onclick="ScrollToElement('about-me')">Rólam</li>
+                        <li onclick="ScrollToElement('projects')">Projektek</li>
+                        <li onclick="ScrollToElement('contact-me')">Kapcsolat</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="absolute-center-container text-center position-absolute">
             <span class="hero-profile-image"></span><br>
-            <span class="welcome-text">Szia, Csaba vagyok</span>
-            <br>
-            <span class="welcome-text-subtitle">Junior full stack fejlesztő</span>
+            <span id="welcome-text" class="welcome-text cursor"></span><br/>
+            <span id="welcome-text-subtitle" class="welcome-text-subtitle"></span>
         </div>
         <a href="#about-me">
             <div class="scroll-down"></div>
@@ -34,13 +39,11 @@
     <!-- about me -->
     <section class="my-3" id="about-me">
         <div class="container-fluid">
-            <div class="row align-items-center" style="height: 500px;">
-                <div class="col-lg-6 text-center">
-                    <div class="image-wrapper">
-                        <img class="frame" src="assets/images/1628488647351.jpg" loading="lazy"/>
-                    </div>                    
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-4 col-sm-4 text-center">
+                    <img class="frame" src="assets/images/aboutme.webp" loading="lazy"/>
                 </div>
-                <div class="col-lg-6 d-grid gap-4">
+                <div class="col-lg-7 col-md-8 col-sm-8 d-grid gap-4">
                     <h3 class="text-dark">Rólam</h3>
                     <div>
                         <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-user-50.png" loading="lazy">Név</strong>
@@ -48,7 +51,7 @@
                     </div>
                     <div>
                         <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-location-50.png" loading="lazy">Hely</strong>
-                        <span class="text-dark">Nyúl, Deák Ferenc utca 5</span>
+                        <span class="text-dark">Nyúl, Park utca 4</span>
                     </div>
                     <div>
                         <strong class="text-dark w-25"><img src="assets/icons/about-me/icons8-mail-50.png" loading="lazy">Email</strong>
@@ -61,7 +64,6 @@
                     <a href="assets/Önéletrajz.docx" download class="btn mx-auto  d-block mb-3 text-white mt-2" style="background-color: #3498db !important;" >Önéletrajz letöltése</a>
                 </div>
             </div>
-
         </div>
     </section>
     
@@ -69,63 +71,63 @@
     <section class="my-3 container-fluid" id="projects">
         <h3 class="text-center text-dark mb-5">Projektjeim</h3>
         <span class="text-center text-secondary d-block projects-subtitle mb-3" style="font-size: 14pt;" >Tech stack</span>
-        <div class="row">
-            <div class="col-lg-4 col-sm-3">
-                <div class="row mb-3 justify-content-center" >
-                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Frontend</span>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2" >
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4">
+                <div class="row mb-3 justify-content-center gap-2" >
+                    <span class="text-center text-secondary d-block projects-subtitle my-2" >Frontend</span>
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2" >
                         <img class="icon" src="assets/icons/icons8-html-5.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-javascript.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-css3.svg" loading="lazy"></img>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                        <img class="icon" style="width: 7rem; height: 100px" src="assets/icons/asp.netmvc.jpg" loading="lazy"></img>
+                <div class="row justify-content-center gap-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="max-width: 7rem;" src="assets/icons/asp.netmvc.webp" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                        <img class="icon" style="width: 6rem;" src="assets/icons/jquery-horizontal.svg" loading="lazy"></img>
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="max-width: 6rem;" src="assets/icons/jquery-horizontal.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-bootstrap.svg" loading="lazy"></img>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-3">
-                <div class="row justify-content-center mb-3">
-                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Backend</span>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4">
+                <div class="row justify-content-center mb-3 gap-2">
+                    <span class="text-center text-secondary d-block projects-subtitle my-2" >Backend</span>
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-c-sharp-logo.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-sql-64.png" loading="lazy"></img>
                     </div>
                 </div>
         
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                        <img class="icon" style="width: 7rem;" src="assets/icons/asp.netapi2.jpg" loading="lazy"></img>
+                <div class="row justify-content-center gap-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="max-width: 7rem;" src="assets/icons/asp.netapi2.webp" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-mysql-logo.svg" loading="lazy"></img>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-3">
-                <div class="row justify-content-center mb-3">
-                    <span class="text-center text-secondary d-block projects-subtitle mb-2" >Egyéb</span>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4">
+                <div class="row justify-content-center gap-2">
+                    <span class="text-center text-secondary d-block projects-subtitle my-2" >Egyéb</span>
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-git.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
                         <img class="icon" src="assets/icons/icons8-visual-studio.svg" loading="lazy"></img>
                     </div>
-                    <div class="col-lg-3 rounded box-shadow mx-1 p-2">
-                        <img class="icon" style="width: 7rem;" src="assets/icons/nunit2.png" loading="lazy"></img>
+                    <div class="col-lg-3 col-10 rounded box-shadow mx-1 p-2">
+                        <img class="icon" style="max-width: 7rem;" src="assets/icons/nunit2.png" loading="lazy"></img>
                     </div>
                 </div>
             </div>
@@ -133,8 +135,8 @@
 
         <div class="projects-container mt-5">
             <div class="row justify-content-center gap-2">
-                <div class="col-lg-3 card p-0" style="width: 18rem;">
-                    <img class="card-img-top image"  src="assets/images/projects/panda.JPG" alt="Panda borítókép" loading="lazy">
+                <div class="col-lg-3 col-md-4 col-sm-6 card p-0" style="max-width: 18rem;">
+                    <img class="card-img-top image"  src="assets/images/projects/panda.webp" alt="Panda borítókép" loading="lazy">
                     <div class="middle">
                         <a href="https://panda.ecity.hu" target="_blank" id="panda-btn" class="btn d-block mx-auto project-btn">Érdekel</a>
                     </div>
@@ -143,8 +145,8 @@
                       <p class="card-text text-muted">Komplex költségvetés tervező program.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 card p-0" style="width: 18rem;">
-                    <img class="card-img-top image"  src="assets/images/projects/eprod.JPG" alt="eProdukció borítókép" loading="lazy">
+                <div class="col-lg-3 col-md-4 col-sm-6 card p-0" style="max-width: 18rem;">
+                    <img class="card-img-top image"  src="assets/images/projects/eprod.webp" alt="eProdukció borítókép" loading="lazy">
                     <div class="middle">
                         <a href="https://www.eprodukcio.hu/" target="_blank" id="eprod-btn" class="btn d-block mx-auto project-btn">Érdekel</a>
                     </div>
@@ -153,8 +155,8 @@
                       <p class="card-text text-muted">Színházi nyilvántartó és tervező szoftver.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 card p-0" style="width: 18rem;">
-                    <img class="card-img-top image" style="max-height: 162px;"  src="assets/images/projects/repeta.JPG" alt="Repeta borítókép" loading="lazy">
+                <div class="col-lg-3 col-md-4 col-sm-6 card p-0" style="max-width: 18rem;">
+                    <img class="card-img-top image" style="max-height: 162px;"  src="assets/images/projects/repeta.webp" alt="Repeta borítókép" loading="lazy">
                     <div class="middle">
                         <a href="https://repeta.ecity.hu/" target="_blank" id="repeta-btn" class="btn d-block mx-auto project-btn">Érdekel</a>
                     </div>
@@ -218,6 +220,7 @@
         </div>
     </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

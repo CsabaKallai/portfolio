@@ -21,8 +21,8 @@ h3 {
     -webkit-filter: blur(1px)
 }
 
-button {
-  animation: blinking 2s 2s ease-in-out infinite;
+#send-btn {
+  animation: scaling 2s 2s ease-in-out infinite;
   color: #79339e !important;
   font-size: 20pt !important;
   width: 150px;
@@ -34,7 +34,7 @@ button:hover{
   border: 0
 }
 
-@keyframes blinking {
+@keyframes scaling {
   0% {transform: scale(1)}
   50% {transform: scale(1.1)}
   100% {transform: scale(1)}
@@ -42,41 +42,41 @@ button:hover{
 
 /* header */
 .background-image {
-    background: url('../assets/images/hero.jpg') no-repeat fixed center ;
+    background: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0, .5)),url('../assets/images/hero.webp') no-repeat fixed center ;
     background-size: cover;
     height: 969px
 }
 
 .navbar-container{
-  position: absolute;
+  position: absolute !important;
   top: 5%;
   right: 200px;
+  background-color: transparent !important;
 }
 
 .navbar-container ul {
-  list-style: none;
+  list-style: none
 }
 
 .navbar-container ul li {
-  color: #3498db;
+  color: white;
   font-weight: 700;
   font-size: 16pt;
-  cursor: pointer;
+  cursor: pointer
 }
 
 .navbar-container ul li:hover {
-  transform: scale(1.2);
+  transform: scale(1.2)
 }
 
 .hero-profile-image {
   border-radius: 50%;
   height: 300px;
   width: 300px;
-  background-color: #79339e;
   display: inline-block;
-  background: url('../assets/images/1628488647351.jpg') no-repeat;
+  background: url('../assets/images/profile.webp') no-repeat;
   background-size: contain;
-  margin-bottom: 50px;
+  margin-bottom: 30px
 }
 
 .absolute-center-container{
@@ -86,28 +86,35 @@ button:hover{
     z-index: 2
 }
 
-.welcome-text {
+.welcome-text, .welcome-text-subtitle {
     font-weight: 900;
-    font-size: 53pt;
-    letter-spacing: 3px;
-    position: relative;
-    color: transparent;
-    animation: fade_up 2s 2s 1 forwards
+    font-size: 50pt;
+    letter-spacing: 3px
 }
 
 .welcome-text-subtitle {
-    font-weight: 900;
-    font-size: 33pt;
-    letter-spacing: 3px;
-    color:transparent;
-    animation: fade_up 2s 3s 1 forwards
+    font-size: 30pt
 }
 
-@keyframes fade_up {
-  100% {
-    color:white
-  }
+.cursor {
+  position: relative
 }
+
+.cursor::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  width: 1px;
+  height: 55%;
+  bottom: 15px;
+  border-right: 2px solid white
+}
+
+.welcome-text-subtitle::after {
+  bottom: 10px;
+}
+
+
 
   .scroll-down {
     height: 50px;
@@ -141,25 +148,22 @@ button:hover{
   }
   
   @keyframes scroll-down {
-    0% {
-      opacity: 0
-    }
-    30% {
-      opacity: 1
-    }
-    60% {
-      opacity: 1
-    }
-    100% {
-      top: 90%;
-      opacity: 0
-    }
+    0% {opacity: 0 }
+    30% {opacity: 1}
+    60% {opacity: 1}
+    100% {top: 90%; opacity: 0}
   }
   
   
   /* about-me */
   strong {
     display: inline-block
+  }
+
+  .frame {
+    height: auto;
+    width: 100%;
+    max-width: 500px;
   }
 
   strong > img {
@@ -232,7 +236,8 @@ button:hover{
   /* contact */
   .contact-background-image {
     background: url('../assets/images/contact/contact-img.svg') no-repeat left;
-    height: 785px;
+    background-size: contain;
+    height: 75vh;
     width: 589px
   }
 
@@ -342,7 +347,6 @@ button:hover{
     color: var(--footer-icons)
 }
 
-
 footer img:hover {
   transform: scale(1.3)
 }
@@ -351,3 +355,27 @@ footer a {
   margin: 0px 10px
 }
 
+@media screen and (max-width: 990px) {
+  .navbar-container {
+    left: 50px !important
+  }
+
+  ul.navbar-nav {
+    gap: 1rem !important;
+    margin-left: 25px;
+    padding: 5px 0px 5px 5px
+  }
+
+  .navbar-container ul li:hover {
+    transform: scale(1.05)
+  }
+
+  .welcome-text {
+    font-size: 30pt;
+  }
+
+  .welcome-text-subtitle {
+    font-size: 20pt;
+  }
+
+}

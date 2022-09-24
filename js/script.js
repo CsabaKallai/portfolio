@@ -54,3 +54,50 @@ function ScrollToElement(id) {
     });
 }
 
+
+const textData = ["Szia, Csaba vagyok","Full stack fejlesztő"];
+const textDataCount = textData.length;
+let count = 0;
+let index = 0;
+let letter = '';
+let timeInterval = 200;
+
+const mainTextElement = document.getElementById('welcome-text');
+const subTextElement = document.getElementById('welcome-text-subtitle');
+
+
+(function Typing() {
+    if (count === textDataCount) {
+        count = 0;
+        timeInterval = 200;
+
+        mainTextElement.textContent = '';
+        mainTextElement.classList.add('cursor');
+        subTextElement.textContent = '';
+    }
+
+    letter = textData[count].slice(0, ++index);
+
+    if(count === 0) {
+        mainTextElement.textContent = letter;
+    }
+    else {
+        subTextElement.textContent = letter;
+    }
+
+    if(letter.length === textData[count].length) {
+        count++;
+        index = 0;
+
+        mainTextElement.classList.remove('cursor');
+        subTextElement.classList.add('cursor');
+
+        if (count === textDataCount) 
+        {
+            timeInterval = 1250
+        }
+    }
+   
+
+    setTimeout(Typing, timeInterval);
+})();
