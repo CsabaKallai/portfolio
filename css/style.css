@@ -1,6 +1,5 @@
 :root {
     --footer-icons: #ffffff;
-    --text-shadow-color: #737a7a;
     --secondary-shadow: #a17a69
 }
 * {
@@ -44,14 +43,14 @@ button:hover{
 .background-image {
     background: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0, .5)),url('../assets/images/hero.webp') no-repeat fixed center ;
     background-size: cover;
-    height: 969px
+    height: 100vh
 }
 
 .navbar-container{
   position: absolute !important;
   top: 5%;
   right: 200px;
-  background-color: transparent !important;
+  background-color: transparent !important
 }
 
 .navbar-container ul {
@@ -75,15 +74,16 @@ button:hover{
   width: 300px;
   display: inline-block;
   background: url('../assets/images/profile.webp') no-repeat;
-  background-size: contain;
-  margin-bottom: 30px
+  background-size: contain
 }
 
 .absolute-center-container{
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
-    z-index: 2
+    z-index: 2;
+    height: 50vh;
+    width: 80vw;
 }
 
 .welcome-text, .welcome-text-subtitle {
@@ -111,10 +111,8 @@ button:hover{
 }
 
 .welcome-text-subtitle::after {
-  bottom: 10px;
+  bottom: 10px
 }
-
-
 
   .scroll-down {
     height: 50px;
@@ -371,11 +369,33 @@ footer a {
   }
 
   .welcome-text {
-    font-size: 30pt;
+    font-size: 1.5rem
   }
 
   .welcome-text-subtitle {
-    font-size: 20pt;
+    font-size: 1rem
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .absolute-center-container {
+    left: 50% !important
+  }
+
+  .welcome-text-subtitle::after {
+    bottom: 5px
+  }
+
+  .welcome-text::after {
+    bottom: 10px
+  }
+
+  .welcome-text {
+    font-size: 2rem
+  }
+
+  .welcome-text-subtitle {
+    font-size: 1.5rem
   }
 
 }
