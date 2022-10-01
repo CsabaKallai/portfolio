@@ -66,7 +66,7 @@ const mainTextElement = document.getElementById('welcome-text');
 const subTextElement = document.getElementById('welcome-text-subtitle');
 
 
-(function Typing() {
+function Typing() {
     if (count === textDataCount) {
         count = 0;
         timeInterval = 200;
@@ -100,4 +100,8 @@ const subTextElement = document.getElementById('welcome-text-subtitle');
    
 
     setTimeout(Typing, timeInterval);
-})();
+};
+
+setTimeout(() => {
+    Typing()
+}, 1000);
